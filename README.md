@@ -498,7 +498,7 @@ _timer:stop()
 
 ## flutter技术积累相关链接
 
-<font color=#0099ff size=5 face="黑体">[flutter通用基础库flutter\_luakit_plugin](https://github.com/williamwen1986/flutter_luakit_demo)</font>
+<font color=#0099ff size=5 face="黑体">[flutter通用基础库flutter\_luakit_plugin](https://juejin.im/post/5c34597651882523d3200c98)</font>
 
 <font color=#0099ff size=5 face="黑体">[flutter\_luakit\_plugin使用例子](https://github.com/williamwen1986/flutter_luakit_demo)</font>
 
