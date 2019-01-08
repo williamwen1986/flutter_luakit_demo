@@ -1,9 +1,13 @@
 ## 使用flutter\_luakit\_plugin作为基础库开发flutter应用
 
 文章开头我们先开门见山给出使用flutter\_luakit\_plugin作为基础库开发和普通flutter的区别。由于flutter定位是便携UI包，flutter提供的基础库功能是不足以满足复杂数据的app应用的，一般flutter开发模式如下图所示，当flutter满足不了我们的需求的时候，使用methodchannel和eventchannel调用native接口。
+
+
 ![image](https://raw.githubusercontent.com/williamwen1986/Luakit/master/image/flutter2native.jpeg)
 
 而使用flutter\_luakit\_plugin作为基础库的开发模式如下图所示，用lua来写逻辑层代码，用flutter写UI代码。luakit 提供了丰富的功能支持，可以支持大部分app的逻辑层开发，包括数据库orm，线程管理，http请求，异步socket，定时器，通知，json等等。**用户只需要写dart代码和lua代码，不需要写oc、swift或java、kotlin代码，从而大幅提升代码的一致性（所有运行代码都是跨平台的）**。
+
+
 ![image](https://raw.githubusercontent.com/williamwen1986/Luakit/master/image/flutter2lua.jpg)
 
 ## flutter\_luakit\_plugin由来
