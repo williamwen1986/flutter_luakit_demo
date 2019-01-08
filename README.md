@@ -31,17 +31,17 @@ Flutter1.0.0 发布了，我认为移动端跨平台开发所需要所有元素�
     
     
 * 当一个已有的app要接入flutter，必然会产生一种情况，就是flutter体系里面的数据和逻辑，跟外部原生app的逻辑是不通的，简单说明一下，就是flutter写的业务逻辑通常是用dart语言写的，我们在原生用object-c、swift或者java、kotlin写的代码是不可以脱离flutter的界面调用dart写的逻辑的，这种互通性的缺失，会导致很多数据联动做不到，譬如原生界面要现实一个flutter页面存下来的数据，或者原生界面要为flutter页面做一些预加载，这些都很不方便，主要是下图中，当flutter界面没调用时，从原生调用flutter接口是不允许的。 
-<div align=center>
+
+
 ![image](https://raw.githubusercontent.com/williamwen1986/Luakit/master/image/flutter1.jpg)
-</div>
 
 
 之前我曾经开源一个纯逻辑层的跨平台解决方案[luakit](https://github.com/williamwen1986/Luakit)([附上luakit的起源](https://www.jianshu.com/p/5b15d20ef797))，里面提供一个业务开发所需要的基本能力，包括网络请求，长连接，短连接，orm数据库，线程，通知机制等等，而且这些能力都是稳定的、跨平台而且经过实际业务验证过的方案。
 
 做完一个版本纯flutter之后，我意识到可以用一种新的开发模式来进行flutter开发，这样可以避免我上面提到的两个问题，我们团队马上付诸实施，做了另一个版本的flutter+luakit的尝试，即用flutter做界面，用lua来写逻辑，结构图如下。
-<div align=center>
+
 ![image](https://raw.githubusercontent.com/williamwen1986/Luakit/master/image/flutter2.jpg)
-</div>
+
 **新的方案开发效率得到极大的提升，不客气的说真正实现了跨平台**，一个业务，从页面到逻辑，所有的代码一气呵成全部由脚本完成（dart+lua），完全不用object-c、swift或者java、kotlin来写逻辑，这样一个业务基本就可以无缝地从一端直接搬到另一端使用，所以我写了这篇文章来介绍我们团队的这个尝试，也把我们的成果[flutter\_luakit\_plugin](https://pub.dartlang.org/packages/flutter_luakit_plugin)开源了出来，让这种开发模式帮助到更多flutter开发团队。
 
 ## 细说开发模式
