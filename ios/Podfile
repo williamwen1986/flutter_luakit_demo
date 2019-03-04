@@ -37,7 +37,7 @@ end
 
 target 'Runner' do
   pod 'curl', '~> 1.0.0'
-  pod 'LuakitPod', '~> 1.0.13'
+  pod 'LuakitPod', '~> 1.0.15'
   # Prepare symlinks folder. We use symlinks to avoid having Podfile.lock
   # referring to absolute paths on developers' machines.
   system('rm -rf .symlinks')
