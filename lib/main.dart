@@ -53,14 +53,18 @@ class _MyHomePageState extends State<MyHomePage> {
     FlutterLuakitPlugin.callLuaFun("WeatherManager", "getWeather").then((dynamic d) {
       print("getWeather" + d.toString());
       setState(() {
-        weathers = d;
+        if(d != null) {
+          weathers = d;
+        }
       });
     });
 
     FlutterLuakitPlugin.callLuaFun("WeatherManager", "loadWeather").then((dynamic d) {
       print("loadWeather" + d.toString());
       setState(() {
-        weathers = d;
+        if(d != null) {
+          weathers = d;
+        }
       });
     });
   }
